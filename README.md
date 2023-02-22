@@ -1,7 +1,9 @@
 ## Problems
 
 
-### In the current state, slides don't consistently render as slides
+### Preview is not idempotent - slides render as plain HTML on first preview
+
+In the current state, slides don't consistently render as slides
 
 * On running `quarto preview index.qmd`, slides render as a regular HTML page using
   "cosmo" theme.
@@ -18,3 +20,8 @@
 * Add a `format.revealjs` block with `toc: true` to `_quarto.yml`.
 
 * Run `quarto preview index.qmd`, and the preview will fail to load.
+
+
+## Notes
+
+* Is this only true for `preview`, or also `render`?
