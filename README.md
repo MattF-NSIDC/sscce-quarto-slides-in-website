@@ -3,7 +3,7 @@
 
 ### Preview is not idempotent - slides render as plain HTML on first preview
 
-In the current state, slides don't consistently render as slides
+In the current state, slides don't consistently render as slides when previewing.
 
 * On running `quarto preview index.qmd`, slides render as a regular HTML page using
   "cosmo" theme.
