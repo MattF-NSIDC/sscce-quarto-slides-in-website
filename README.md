@@ -3,7 +3,8 @@
 
 ### Preview is not idempotent - slides render as plain HTML on first preview
 
-In the current state, slides don't consistently render as slides when previewing.
+In the `main` branch, slides don't consistently render as slides when previewing.
+`quarto render` is _not_ affected by this issue.
 
 * On running `quarto preview index.qmd`, slides render as a regular HTML page using
   "cosmo" theme.
@@ -28,7 +29,4 @@ ERROR: NotFound: No such file or directory (os error 2), rename
 
 * Run `quarto render` or `quarto preview index.qmd`, and observe the error message.
 
-
-## Notes
-
-* Is this only true for `preview`, or also `render`?
+You can also check out the `revealjs-config-breaks-preview` branch to reproduce.
