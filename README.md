@@ -1,5 +1,15 @@
 ## Problems
 
+I created this project with the following steps:
+
+1. Create project template
+    ```
+    quarto create-project sscce-quarto-slides-in-website --type website
+    ```
+1. Create `slides/index.qmd` with `format: 'revealjs'` in front-matter.
+1. Add link from `index.qmd` to `slides/index.qmd`
+1. `quarto preview index.qmd`
+
 
 ### Preview is not idempotent - slides render as plain HTML on first preview
 
