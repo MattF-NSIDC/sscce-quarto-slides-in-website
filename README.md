@@ -15,7 +15,14 @@ In the current state, slides don't consistently render as slides
   as a HTML page with "cosmo" theme.
 
 
-### On adding `revealjs` config to `_quarto.yml`, render fails
+### On adding `revealjs` config to `_quarto.yml`, preview fails
+
+Preview fails with:
+
+```
+ERROR: NotFound: No such file or directory (os error 2), rename
+'/path/to/quarto/project/index.html' -> '/path/to/quarto/project/_site/index.html'
+```
 
 * Add a `format.revealjs` block with `toc: true` to `_quarto.yml`.
 
