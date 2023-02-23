@@ -40,3 +40,12 @@ ERROR: NotFound: No such file or directory (os error 2), rename
 * Run `quarto render` or `quarto preview index.qmd`, and observe the error message.
 
 You can also check out the `revealjs-config-breaks-preview` branch to reproduce.
+
+
+#### Solution: User error!
+
+Thanks to @cscheid in <https://github.com/quarto-dev/quarto-cli/issues/4470>, I now
+understand that specifying both `html` and `revealjs` in `_quarto.yml` causes all markdown
+to be rendered with both forms, and they're both HTML-type outputs, so the output files
+conflict. The solution is to use `_metadata.yml` to specify `revealjs` settings inside
+the `slides` directory.
