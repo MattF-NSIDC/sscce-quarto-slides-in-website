@@ -13,6 +13,8 @@ I created this project with the following steps:
 
 ### Preview is not idempotent - slides render as plain HTML on first preview
 
+_Confirmed as bug: <https://github.com/quarto-dev/quarto-cli/issues/4469>_
+
 In the `main` branch, slides don't consistently render as slides when previewing.
 `quarto render` is _not_ affected by this issue.
 
@@ -25,8 +27,17 @@ In the `main` branch, slides don't consistently render as slides when previewing
 * Delete `_site` and `.quarto` and run the preview again, and the slides will again show
   as a HTML page with "cosmo" theme.
 
+---
+
+Discovered with aid of a Quarto contributor that `quarto preview` behaves better on
+first run than `quarto preview [file]`. However, after triggering a hot-reload
+(depending on which file was edited to trigger the hot-reload), the behavior changes.
+Please see the linked bug report for full details.
+
 
 ### On adding `revealjs` config to `_quarto.yml`, render fails
+
+_Confirmed as user error: <https://github.com/quarto-dev/quarto-cli/issues/4470>_
 
 Render and preview both fail with:
 
